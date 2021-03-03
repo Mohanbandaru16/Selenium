@@ -54,7 +54,8 @@ public class QDR {
 		driver.findElement(By.id("btnApplyAll")).click();
 		Thread.sleep(40000);
 		driver.findElement(By.className("short-user")).click();
-		driver.findElement(By.cssSelector("*[href='/logout\']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
+		//driver.findElement(By.cssSelector("*[href='/logout\']")).click();
 	//	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
 	//	driver.findElement(By.xpath("//*[@id=\"nav\"]/ul/li[7]/div/ul/li[4]/a")).click();   //logout
 	}
