@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 //code to add multiple IP's in OneApp
 
 import org.openqa.selenium.By;
@@ -39,7 +41,7 @@ public class secondprogram {
 		Thread.sleep(15000);
 		driver.findElement(By.xpath("//*[@id=\'chassis_img6\']")).click();  //to open module
 		Thread.sleep(10000); 
-		driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click(); //using text
+		driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7) [10.100.97.46]']")).click(); //using text
 		Thread.sleep(15000);
 		driver.findElement(By.className("short-user")).click();
 		driver.findElement(By.xpath("//*[@id=\"nav\"]/ul/li[7]/div/ul/li[4]/a")).click(); //logout

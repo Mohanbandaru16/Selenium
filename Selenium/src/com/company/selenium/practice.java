@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -16,7 +18,7 @@ public class practice {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 	//	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		WebDriverWait w = new WebDriverWait(driver,5);
+		WebDriverWait w = new WebDriverWait(driver,5);   //explicit wait
 		String[] items={"Cucumber","Brocolli","Beetroot"};  //array is declared to make list of products that are needed to add in cart
 	
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");

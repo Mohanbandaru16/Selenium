@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,7 +45,7 @@ public class FF_Oneapp {
      	//dropdown.selectByVisibleText("Minor");
      	System.out.println(dropdown.getFirstSelectedOption().getText());   // to print Drop down option
      	//driver.findElement(By.xpath("//*[@id=\"btnApplyAll\"]")).click();  // to click apply
-     	driver.findElement(By.id("btnApplyAll")).click();  // to click apply
+     	//driver.findElement(By.id("btnApplyAll")).click();  // to click apply
      	
 
 	}

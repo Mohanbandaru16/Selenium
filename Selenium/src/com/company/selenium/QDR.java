@@ -1,3 +1,7 @@
+package com.company.selenium;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,25 +16,27 @@ public class QDR {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 		driver.get("http://192.168.1.150");	
 		driver.manage().window().maximize();
 		//driver.findElement(By.xpath("//*[@id=\'userid\']")).sendKeys("admin");
 		driver.findElement(By.id("userid")).sendKeys("admin");
 		driver.findElement(By.xpath("//*[@name='pswrd']")).sendKeys("admin");
 		driver.findElement(By.id("btnLogin")).click();
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8 [10.100.97.48]']")).click();
 		//driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click();
 		Thread.sleep(40000);
 		//driver.findElement(By.cssSelector("#chassis_img25")).click();
-		driver.findElement(By.id("chassis_img25")).click();  //open slot 25
+		driver.findElement(By.cssSelector("img#chassis_img25")).click();  //open slot 25
 		Thread.sleep(30000);
-		driver.findElement(By.xpath("//a[normalize-space()='User Setup']")).click();  //open usersetup tab
+		driver.findElement(By.cssSelector("a#linkTab3")).click();
+//		driver.findElement(By.xpath("//a[normalize-space()='User Setup']")).click();  //open usersetup tab
 		Thread.sleep(5000);
 //		WebElement usermode= driver.findElement(By.id("CX_25_55-mChnlRxUserModesSupported1-3")); //to click on user mode
 		WebElement usermode= driver.findElement(By.xpath("//select[@id='CX_25_55-mChnlRxUserModesSupported1-3']"));
 		Thread.sleep(5000);
-	/*	Select dropdown = new Select(usermode); //to select usermode
+		Select dropdown = new Select(usermode); //to select usermode
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 		dropdown.selectByIndex(0); //to change usermode to 100 from 200
 		System.out.println(dropdown.getFirstSelectedOption().getText());		
@@ -39,7 +45,7 @@ public class QDR {
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
 		dropdown1.selectByIndex(2);
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
-	*/	
+	
 		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();  //open alarms tab
 		System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());
 		
@@ -49,13 +55,13 @@ public class QDR {
 		Assert.assertTrue(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());
 	*/	
 		
-		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
+		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
 		driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).click();
-		driver.findElement(By.id("btnApplyAll")).click();
-		Thread.sleep(40000);
+//		driver.findElement(By.id("btnApplyAll")).click();
+//		Thread.sleep(40000);
+		
 		driver.findElement(By.className("short-user")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
-		//driver.findElement(By.cssSelector("*[href='/logout\']")).click();
+		driver.findElement(By.cssSelector("*[href='/logout\']")).click();
 	//	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
 	//	driver.findElement(By.xpath("//*[@id=\"nav\"]/ul/li[7]/div/ul/li[4]/a")).click();   //logout
 	}

@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 
 import java.util.concurrent.TimeUnit;
 

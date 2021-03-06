@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,8 +18,8 @@ public class facebook {
 		driver.findElement(By.cssSelector("input.inputtext")).sendKeys("9642096111");
 		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("ksrlgautami");
 		Thread.sleep(10000);
-		driver.findElement(By.id("u_0_d_5M")).click(); //to click on login
-		//driver.findElement(By.xpath("//*[@id=\'u_0_d_by\']")).click();
+		driver.findElement(By.cssSelector("button[name='login']")).click();//to click on login
+		//driver.findElement(By.xpath("//*[@id=\'u_0_d_by\']")).click(); 
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@placeholder='Search Facebook']")).sendKeys("swe");  //to click on search
 		Thread.sleep(5000);

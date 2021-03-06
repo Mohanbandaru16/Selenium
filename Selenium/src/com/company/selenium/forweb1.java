@@ -1,3 +1,5 @@
+package com.company.selenium;
+
 
 public class forweb1 {
 
