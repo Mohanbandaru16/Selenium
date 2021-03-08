@@ -3,9 +3,11 @@ package com.company.selenium;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
@@ -23,19 +25,39 @@ public class QDR {
 		driver.findElement(By.id("userid")).sendKeys("admin");
 		driver.findElement(By.xpath("//*[@name='pswrd']")).sendKeys("admin");
 		driver.findElement(By.id("btnLogin")).click();
-//		Thread.sleep(10000);
+		Thread.sleep(10000);
 	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8 [10.100.97.48]']")).click();
 		//driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click();
 		Thread.sleep(40000);
-		//driver.findElement(By.cssSelector("#chassis_img25")).click();
+		
 		driver.findElement(By.cssSelector("img#chassis_img25")).click();  //open slot 25
 		Thread.sleep(30000);
-		driver.findElement(By.cssSelector("a#linkTab3")).click();
-//		driver.findElement(By.xpath("//a[normalize-space()='User Setup']")).click();  //open usersetup tab
+
+		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();  //open alarms tab
+		Actions a = new Actions(driver); 
+		WebElement selectAll = driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask8']"));
+		
+		a.moveToElement(selectAll).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();  //to deselect all
+			
+	//	System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected()); //to know if selected alarm is enabled/disabled
+	//	System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
+		
+		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();
+	
+		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+     	
+		
+		
+		
+		
+		
+		
+		/*		driver.findElement(By.cssSelector("a#linkTab3")).click();  //open usersetup tab
+
 		Thread.sleep(5000);
-//		WebElement usermode= driver.findElement(By.id("CX_25_55-mChnlRxUserModesSupported1-3")); //to click on user mode
-		WebElement usermode= driver.findElement(By.xpath("//select[@id='CX_25_55-mChnlRxUserModesSupported1-3']"));
-		Thread.sleep(5000);
+
+		WebElement usermode= driver.findElement(By.xpath("//select[@id='CX_25_55-mChnlRxUserModesSupported1-3']")); //to click on user mode
+		Thread.sleep(5000);	
 		Select dropdown = new Select(usermode); //to select usermode
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 		dropdown.selectByIndex(0); //to change usermode to 100 from 200
@@ -45,25 +67,20 @@ public class QDR {
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
 		dropdown1.selectByIndex(2);
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
-	
-		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();  //open alarms tab
-		System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());
+	*/
 		
-	/*	Assert.assertFalse(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());		 //stops code if checkbox is Enabled.
+	/*	Assert.assertFalse(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());		 //stops code if checkbox is Enabled. Assertions concept
 		driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).click();
 		System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());		
 		Assert.assertTrue(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());
 	*/	
 		
-		System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
-		driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).click();
-//		driver.findElement(By.id("btnApplyAll")).click();
-//		Thread.sleep(40000);
 		
-		driver.findElement(By.className("short-user")).click();
-		driver.findElement(By.cssSelector("*[href='/logout\']")).click();
-	//	driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
-	//	driver.findElement(By.xpath("//*[@id=\"nav\"]/ul/li[7]/div/ul/li[4]/a")).click();   //logout
+	//	driver.findElement(By.id("btnApplyAll")).click();  //apply
+	//	Thread.sleep(40000);		
+	//	driver.findElement(By.className("short-user")).click();
+	//	driver.findElement(By.cssSelector("*[href='/logout\']")).click();  //logout
+ 
 	}
 
 }
