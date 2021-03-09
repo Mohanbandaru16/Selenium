@@ -18,14 +18,14 @@ public class QDR {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.get("http://192.168.1.150");	
 		driver.manage().window().maximize();
 		//driver.findElement(By.xpath("//*[@id=\'userid\']")).sendKeys("admin");
 		driver.findElement(By.id("userid")).sendKeys("admin");
 		driver.findElement(By.xpath("//*[@name='pswrd']")).sendKeys("admin");
 		driver.findElement(By.id("btnLogin")).click();
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8 [10.100.97.48]']")).click();
 		//driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click();
 		Thread.sleep(40000);
@@ -41,13 +41,13 @@ public class QDR {
 			
 	//	System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected()); //to know if selected alarm is enabled/disabled
 	//	System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
-		Thread.sleep(5000); 
+	//	Thread.sleep(5000); 
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();
 	
 		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
      	
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		
 		
 		
@@ -78,9 +78,9 @@ public class QDR {
 		
 		
 		driver.findElement(By.id("btnApplyAll")).click();  //apply
-		Thread.sleep(40000);		
+		Thread.sleep(50000);		
 		driver.findElement(By.xpath("//span[@class='short-user']")).click();
-		driver.findElement(By.cssSelector("*[href='/logout\']")).click();  //logout
+		driver.findElement(By.cssSelector("*[href='/logout']")).click();  //logout
  
 	}
 

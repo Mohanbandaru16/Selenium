@@ -14,15 +14,14 @@ public class framesTest {
 		WebDriver driver=new FirefoxDriver();
 		driver.get("https://jqueryui.com/droppable/");
 		System.out.println(driver.findElements(By.tagName("iframe")).size()); //to know how many frames are there
-		driver.switchTo().frame(0);
+		driver.switchTo().frame(0);  //switch to frame using id
 		//driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame"))); //switch to frame using webelement
 		//driver.findElement(By.id("draggable")).click();
 		Actions a=new Actions(driver);
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
 		a.dragAndDrop(source, target).build().perform();
-		
-		
+		driver.switchTo().defaultContent(); // to come out of frame 
 	}
 
 }
