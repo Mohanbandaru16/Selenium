@@ -41,12 +41,13 @@ public class QDR {
 			
 	//	System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected()); //to know if selected alarm is enabled/disabled
 	//	System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
+		Thread.sleep(5000); 
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();
 	
 		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
      	
-		
+		Thread.sleep(5000);
 		
 		
 		
@@ -76,10 +77,10 @@ public class QDR {
 	*/	
 		
 		
-	//	driver.findElement(By.id("btnApplyAll")).click();  //apply
-	//	Thread.sleep(40000);		
-	//	driver.findElement(By.className("short-user")).click();
-	//	driver.findElement(By.cssSelector("*[href='/logout\']")).click();  //logout
+		driver.findElement(By.id("btnApplyAll")).click();  //apply
+		Thread.sleep(40000);		
+		driver.findElement(By.xpath("//span[@class='short-user']")).click();
+		driver.findElement(By.cssSelector("*[href='/logout\']")).click();  //logout
  
 	}
 
