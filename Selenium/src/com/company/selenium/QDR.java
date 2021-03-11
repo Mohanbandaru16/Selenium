@@ -43,17 +43,17 @@ public class QDR {
 	//	System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size()); //prints number of checkboxes in page
 	//	Thread.sleep(5000); 
 		
-		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();
+		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();   
 	
 		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
-     	
+     	a.moveToElement(driver.findElement(By.xpath("//span[@title='DR3600N']"))).doubleClick().build().perform();  //Expands DR tree
+     	Thread.sleep(15000);
+    	a.moveToElement(driver.findElement(By.xpath("//span[@title='DT4600N (DT46 T1, DT46 T2), Node Monitoring']"))).doubleClick().build().perform(); 
+    	
 //		Thread.sleep(5000);
 		
 		
-		
-		
-		
-		/*		driver.findElement(By.cssSelector("a#linkTab3")).click();  //open usersetup tab
+	/*	driver.findElement(By.cssSelector("a#linkTab3")).click();  //open usersetup tab
 
 		Thread.sleep(5000);
 
@@ -77,11 +77,11 @@ public class QDR {
 	*/	
 		
 		
-		driver.findElement(By.id("btnApplyAll")).click();  //apply
+	/*	driver.findElement(By.id("btnApplyAll")).click();  //apply
 		Thread.sleep(50000);		
 		driver.findElement(By.xpath("//span[@class='short-user']")).click();
 		driver.findElement(By.cssSelector("*[href='/logout']")).click();  //logout
- 
+*/ 
 	}
 
 }
