@@ -47,8 +47,8 @@ public class QDR {
 	
 		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
      	a.moveToElement(driver.findElement(By.xpath("//span[@title='DR3600N']"))).doubleClick().build().perform();  //Expands DR tree
-     	Thread.sleep(15000);
-    	a.moveToElement(driver.findElement(By.xpath("//span[@title='DT4600N (DT46 T1, DT46 T2), Node Monitoring']"))).doubleClick().build().perform(); 
+     	
+    //	a.moveToElement(driver.findElement(By.xpath("//span[@title='DT4600N (DT46 T1, DT46 T2), Node Monitoring']"))).doubleClick().build().perform(); 
     	
 //		Thread.sleep(5000);
 		
