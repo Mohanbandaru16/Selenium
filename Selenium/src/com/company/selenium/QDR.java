@@ -36,7 +36,6 @@ public class QDR {
 		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();  //open alarms tab
 		Actions a = new Actions(driver); 
 		WebElement selectAll = driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask8']"));
-		
 		a.moveToElement(selectAll).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();  //to deselect all
 			
 	//	System.out.println(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected()); //to know if selected alarm is enabled/disabled
@@ -45,15 +44,14 @@ public class QDR {
 		
 		driver.findElement(By.xpath("//span[normalize-space()='Rx 2']")).click();   
 	
-		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+		a.moveToElement(driver.findElement(By.xpath("//label[@for='CX_25_55-chkSigMask16']"))).contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform(); //to selectall
      	a.moveToElement(driver.findElement(By.xpath("//span[@title='DR3600N']"))).doubleClick().build().perform();  //Expands DR tree
      	
-    //	a.moveToElement(driver.findElement(By.xpath("//span[@title='DT4600N (DT46 T1, DT46 T2), Node Monitoring']"))).doubleClick().build().perform(); 
-    	
-//		Thread.sleep(5000);
+    //	a.moveToElement(driver.findElement(By.xpath("//span[@title='DT4600N (DT46 T1, DT46 T2), Node Monitoring']"))).doubleClick().build().perform();  //expand DT tree
+    	  
+		Thread.sleep(15000);
 		
-		
-	/*	driver.findElement(By.cssSelector("a#linkTab3")).click();  //open usersetup tab
+		driver.findElement(By.cssSelector("a#linkTab3")).click();  //open usersetup tab
 
 		Thread.sleep(5000);
 
@@ -68,7 +66,7 @@ public class QDR {
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
 		dropdown1.selectByIndex(2);
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
-	*/
+	
 		
 	/*	Assert.assertFalse(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());		 //stops code if checkbox is Enabled. Assertions concept
 		driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).click();
