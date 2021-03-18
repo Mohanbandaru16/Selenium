@@ -37,7 +37,7 @@ public class scope {
 			System.out.println(driver.getTitle());
 			}
 			
-}
+	}
 	}
 
 
