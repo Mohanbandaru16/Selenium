@@ -23,7 +23,7 @@ public class otsweb {
 			//WebDriver driver=new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			try {
-			driver.get("http:admin:admin@10.100.97.45/index.ssi");		
+			driver.get("http:admin:admin@10.100.97.40/index.ssi");		
 			Thread.sleep(80);
 			driver.quit();
 			System.out.println(i+1);
@@ -43,7 +43,7 @@ public class otsweb {
 		System.out.println("Web Reseted:"+String.valueOf(i));
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 			WebDriver driver=new ChromeDriver();
-			driver.get("http://192.168.1.22:81/setindividualdata?deviceid=95&setval=1");
+			driver.get("http://192.168.1.22:98/setindividualdata?deviceid=95&setval=1");
 			Thread.sleep(80000);
 			driver.quit();
 			

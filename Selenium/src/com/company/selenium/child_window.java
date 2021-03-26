@@ -22,7 +22,7 @@ public class child_window {
 		driver.switchTo().window(childID); //to switch to child window
 		System.out.println(driver.findElement(By.cssSelector(".im-para.red")).getText());
 		driver.findElement(By.cssSelector(".im-para.red")).getText();
-	    String emailId=	driver.findElement(By.cssSelector(".im-para.red")).getText().split("at")[1].trim().split(" ")[0];
+	    String emailId=	driver.findElement(By.cssSelector(".im-para.red")).getText().split("at")[1].trim().split(" ")[0]; //will split and trip text
 		driver.switchTo().window(parentID);
 	    driver.findElement(By.id("username")).sendKeys(emailId);
 	}

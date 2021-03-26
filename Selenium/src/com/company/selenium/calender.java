@@ -26,7 +26,7 @@ public class calender {
 		for(int i=0;i<count;i++)
 		{
 		String text=driver.findElements(By.className("day")).get(i).getText();
-		if(text.equalsIgnoreCase("29"))
+		if(text.equalsIgnoreCase("4"))
 		{
 			driver.findElements(By.className("day")).get(i).click();
 			break;
