@@ -24,6 +24,7 @@ public class ssl_certification_handling {
 		c.merge(ds);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(c);
+		driver.get("https://10.100.97.64/");
 		
 	}
 
