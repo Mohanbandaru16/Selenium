@@ -26,7 +26,7 @@ public class QDR {
 		driver.findElement(By.xpath("//*[@name='pswrd']")).sendKeys("admin");
 		driver.findElement(By.id("btnLogin")).click();
 //		Thread.sleep(10000);
-	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8 [10.100.97.48]']")).click();
+	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8  [10.100.97.48]']")).click();
 		//driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click();
 		Thread.sleep(40000);
 		
