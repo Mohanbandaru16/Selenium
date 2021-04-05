@@ -38,6 +38,7 @@ public class CX3003 {
      	driver.findElement(By.xpath("//span[@class='short-user']")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();  //logout
 		driver.close();
+		System.out.println("iteration "+String.valueOf(i));
 	}
 
 }}
