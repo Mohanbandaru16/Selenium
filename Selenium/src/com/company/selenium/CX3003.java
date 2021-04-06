@@ -26,7 +26,7 @@ public class CX3003 {
 		System.out.println(driver.findElements(By.tagName("a")).size());
 		Thread.sleep(10000);
 		driver.findElement(By.id("chassis_img8")).click();
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 	//	driver.findElement(By.className(".nav-link.active.show")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();
 		Actions a=new Actions (driver);
