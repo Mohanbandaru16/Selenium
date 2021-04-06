@@ -43,6 +43,10 @@ public class UDR {
 		Select dropdown1 = new Select(frequency);
 		dropdown1.selectByIndex(1);	
 		
+		//driver.findElement(By.id("CX_22_20_3-mChnlRxChnlAttenuationValue1-3")).sendKeys(Keys.ARROW_UP);
+		a.moveToElement(driver.findElement(By.id("CX_22_20_3-mChnlRxChnlAttenuationValue1-3"))).sendKeys(Keys.ARROW_DOWN).build().perform();
+		
+		
 	}
 
 }
