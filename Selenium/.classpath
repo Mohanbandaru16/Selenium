@@ -24,5 +24,6 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/softwares/setup of selenium/commons-io-2.8.0/commons-io-2.8.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/softwares/setup of selenium/commons-io-2.8.0/commons-io-2.8.0-tests.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/softwares/setup of selenium/commons-io-2.8.0/commons-io-2.8.0-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/softwares/setup of selenium/testng-7.4.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
