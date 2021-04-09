@@ -16,7 +16,7 @@ public class calender {
 		driver.get("https://www.path2usa.com/travel-companions");
 		driver.findElement(By.xpath("//input[@id='travel_date']")).click();
 		//!(negation) in while is if it is true becomes false, if it is false becomes true
-		while(!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText().contains("April")) 
+		while(!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText().contains("May")) 
 		{
 		driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='next']")).click();	
 		}
