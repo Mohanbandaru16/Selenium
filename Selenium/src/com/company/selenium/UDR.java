@@ -44,7 +44,8 @@ public class UDR {
 		dropdown1.selectByIndex(1);	
 		
 		//driver.findElement(By.id("CX_22_20_3-mChnlRxChnlAttenuationValue1-3")).sendKeys(Keys.ARROW_UP);
-		a.moveToElement(driver.findElement(By.id("CX_22_20_3-mChnlRxChnlAttenuationValue1-3"))).sendKeys(Keys.ARROW_DOWN).build().perform();
+		driver.findElement(By.cssSelector("a[title='Tools']")).click();
+		driver.findElement(By.linkText("Web Files Update Tool")).click();
 		
 		
 	}
