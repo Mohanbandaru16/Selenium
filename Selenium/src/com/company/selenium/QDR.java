@@ -32,7 +32,7 @@ public class QDR {
 		
 		driver.findElement(By.cssSelector("img#chassis_img25")).click();  //open slot 25
 		Thread.sleep(30000);
-
+		
 		driver.findElement(By.xpath("//a[normalize-space()='Alarms']")).click();  //open alarms tab
 		Actions a = new Actions(driver); 
 		WebElement selectAll = driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask8']"));
@@ -66,7 +66,7 @@ public class QDR {
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
 		dropdown1.selectByIndex(2);
 		System.out.println(dropdown1.getFirstSelectedOption().getText());
-	
+		
 		
 	/*	Assert.assertFalse(driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).isSelected());		 //stops code if checkbox is Enabled. Assertions concept
 		driver.findElement(By.cssSelector("label[for='CX_25_55-chkSigMask7']")).click();
