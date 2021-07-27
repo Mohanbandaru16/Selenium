@@ -21,6 +21,7 @@ public class Screenshot {
 		driver.get("https://www.amazon.com/");
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src,new File("C:\\Users\\DELL\\Desktop\\New folder\\screenshot.png"));
+	
 	}
 
 }
