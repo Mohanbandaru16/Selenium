@@ -21,16 +21,13 @@ public class secondprogram {
 		driver.findElement(By.id("btnLogin")).click(); //log in click
 		//Thread.sleep(10000);
 	    //System.out.println(driver.findElement(By.cssSelector("span#logstatus")).getText()); //if we enter wrong Pwrd, prints msg
-	
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id=\'img_add\']")); //to click add device
-		driver.findElement(By.xpath("//*[@id=\"lblDevicetype\"]/div[2]/label")).click(); //to click multiple device
 		//driver.findElement(By.xpath("//*[@id=\'txtIpAddress\']")).sendKeys("10.100.97.40");  // to add single IP.
 		driver.findElement(By.xpath("//*[@id=\'txtFromIpAddress\']")).sendKeys("10.100.97.40"); //to add ip in from when we select multiple IP
 		driver.findElement(By.xpath("//*[@id=\'txtToIpAddress\']")).sendKeys("10.100.97.50");				
 		//driver.findElement(By.linkText("Forgot password?")).click();
 		//driver.findElement(By.className("short-user")).click();
-	
 		//System.out.println(driver.getCurrentUrl()); 
 		//driver.findElement(By.cssSelector("#img_add")).click();
 		driver.findElement(By.cssSelector("#btnAddDevice")).click();
