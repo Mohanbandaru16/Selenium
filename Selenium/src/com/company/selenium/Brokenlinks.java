@@ -26,7 +26,6 @@ public class Brokenlinks {
 		System.out.println(responsecode);
 		
 		
-		
 	}
 
 }
