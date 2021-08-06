@@ -15,7 +15,7 @@ public class QDR {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+	
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\softwares\\setup of selenium\\SE_Chrome\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
@@ -26,7 +26,7 @@ public class QDR {
 		driver.findElement(By.xpath("//*[@name='pswrd']")).sendKeys("admin");
 		driver.findElement(By.id("btnLogin")).click();
 //		Thread.sleep(10000);
-	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-62,COM8  [10.100.97.48]']")).click();
+	    driver.findElement(By.xpath("//*[text()= 'CX-48 CX3002 VNC-66,COM24  [10.100.97.48]']")).click();
 		//driver.findElement(By.xpath("//*[text()='CX3002 - 46 (Lap2, COM7)  [10.100.97.46]']")).click();
 		Thread.sleep(40000);
 		
