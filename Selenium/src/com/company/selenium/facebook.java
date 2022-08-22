@@ -16,7 +16,7 @@ public class facebook {
 		//driver.findElement(By.id("email")).sendKeys("9642096111");
 		driver.manage().window().maximize();
 		driver.findElement(By.cssSelector("input.inputtext")).sendKeys("9642096111");
-		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("ksrlgautami");
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("*********");
 		Thread.sleep(10000);
 		driver.findElement(By.cssSelector("button[name='login']")).click();//to click on login
 		//driver.findElement(By.xpath("//*[@id=\'u_0_d_by\']")).click(); 
